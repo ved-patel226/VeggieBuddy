@@ -8,7 +8,7 @@ def ask_llm(prompt):
     prompt = prompt_txt + prompt
 
     response = ollama.chat(
-        model="llava:latest", messages=[{"role": "user", "content": prompt}]
+        model="mistral", messages=[{"role": "user", "content": prompt}]
     )
 
     return response["message"]["content"]

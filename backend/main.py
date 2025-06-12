@@ -4,6 +4,7 @@ from veggiebuddy.llm import ask_llm
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
+import re
 
 app = Flask(__name__)
 CORS(app)
@@ -22,7 +23,7 @@ def get_restaurants():
     return jsonify(filtered)
 
 
-@app.route("/api/restaurants2")
+@app.route("/api/resturuants2")
 def get_restaurants2():
     query = request.args.get("q", "").lower()
     filtered = (
@@ -33,7 +34,22 @@ def get_restaurants2():
     relevent_resturuant = filtered[0]
     place_id = relevent_resturuant["place_id"]
 
-    return jsonify(relevent_resturuant)
+    menu_items = VeggieBuddyScraper(place_id).scrape()
+    veg_items = 0
+
+    for item in menu_items:
+        res = ask_llm(str(item))
+
+        # Remove anything in parentheses (and the parentheses) from res
+        res_clean = re.sub(r"\(.*?\)", "", res).strip()
+        if res_clean.lower() == "y":
+            veg_items += 1
+        elif res_clean.lower() == "n":
+            continue
+        else:
+            print(f"Unrecognized output, defaulting to 'n', {res_clean}")
+
+    return jsonify(veg_items)
 
 
 if __name__ == "__main__":

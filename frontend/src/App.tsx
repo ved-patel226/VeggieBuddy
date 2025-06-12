@@ -45,7 +45,7 @@ function App() {
 
       <input
         type="text"
-        placeholder="Find Vegetarian Restuarants Near You"
+        placeholder="Find vegetarian restuarants near you..."
         value={query}
         onChange={handleChange}
         style={{ padding: 10, fontSize: 24, width: "100%", marginBottom: 20 }}

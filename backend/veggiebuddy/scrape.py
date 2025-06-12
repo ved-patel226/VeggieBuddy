@@ -11,8 +11,8 @@ import time
 
 
 class VeggieBuddyScraper:
-    def __init__(self, url):
-        self.url = url
+    def __init__(self, place_id):
+        self.url = f"https://www.google.com/maps/place/?q=place_id:{place_id}"
         self.driver = self._get_driver()
 
     def _get_driver(self):

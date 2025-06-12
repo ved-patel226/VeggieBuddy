@@ -1,6 +1,8 @@
 You will be given a food title and description. 
 Your job is to deside if the food is vegetarian.
-If you are not sure, be safe, and say the food isn't vegetarian.
+If you are not sure, be safe, and output "n".
+Also, if it is a drink, always output "n".
+But, besides that, everything counts. Include dessert, appetizers, and main entrees.
 Output "y" if it is vegetarian, and output "n" if you aren't sure or the food is not vegetarian.
 
 Here is the food title and description:
