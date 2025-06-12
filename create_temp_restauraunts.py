@@ -2,7 +2,12 @@ import requests
 import time
 import json
 
-API_KEY = ""  # Replace with your actual API key
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+API_KEY = os.environ["GOOGLE_PLACE_API_KEY"]
 LOCATION = "40.8154,-73.9580"  # Approximate center of Upper Manhattan
 RADIUS = 5000  # in meters (max for Places API is 50,000)
 TYPE = "restaurant"
