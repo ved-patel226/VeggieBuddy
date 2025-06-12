@@ -48,7 +48,7 @@ function App() {
         placeholder="Search restaurants by name..."
         value={query}
         onChange={handleChange}
-        style={{ padding: 10, fontSize: 16, width: "100%", marginBottom: 20 }}
+        style={{ padding: 10, fontSize: 24, width: "100%", marginBottom: 20 }}
       />
 
       {loading && <p>Loading...</p>}
@@ -65,7 +65,7 @@ function App() {
             style={{
               padding: 15,
               marginBottom: 15,
-              backgroundColor: "#f0f0f0",
+              backgroundColor: "#67AE6E",
               borderRadius: 6,
             }}
           >
