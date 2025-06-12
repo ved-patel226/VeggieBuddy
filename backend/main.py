@@ -1,3 +1,6 @@
+from veggiebuddy.scrape import VeggieBuddyScraper
+from veggiebuddy.llm import ask_llm
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
