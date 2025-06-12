@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
     <section className="relative w-full min-h-screen bg-gradient-to-br from-green-50 to-white overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-0 w-full opacity-40">
+        <div className="absolute bottom-0 left-0 w-full opacity-80">
           <svg
             viewBox="0 0 1440 320"
             fill="none"
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
       {/* Content */}
-      <div className="w-full mx-auto flex flex-col lg:flex-row items-center h-screen px-6 py-8">
+      <div className="flex flex-row w-full justify-center items-center">
         <div
           className={`lg:w-1/2 lg:pr-8 z-10 transition-all duration-1000 transform ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
