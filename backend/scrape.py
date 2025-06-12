@@ -72,13 +72,14 @@ class VeggieBuddyScraper:
 
         menu_options = self.get_all_menu_options()
 
+        items = []
+
         for menu in menu_options:
             self.click_element(menu)
 
-            print(self.get_items())
+            items.append(self.get_items())
 
-        while True:
-            time.sleep(10)
+        print(items)
 
 
 if __name__ == "__main__":

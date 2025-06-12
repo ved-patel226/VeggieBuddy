@@ -18,7 +18,9 @@ function App() {
     setLoading(true);
     setError(null);
 
-    fetch(`/api/restaurants?q=${encodeURIComponent(query)}`)
+    fetch(
+      `http://127.0.0.1:5000/api/restaurants?q=${encodeURIComponent(query)}`
+    )
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();
