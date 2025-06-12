@@ -1,9 +1,9 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.chrome.options import Options
-
-from bs4 import BeautifulSoup
-import time
 from selenium.webdriver.common.by import By
+
+import time
 
 
 def get_driver(url):
@@ -23,6 +23,14 @@ def get_menu_button(driver):
     )
 
 
+def get_all_menu_options(driver: WebDriver):
+    buttons = driver.find_elements(By.CSS_SELECTOR, ".RWPxGd")
+
+    print(len(buttons))
+
+    return buttons
+
+
 def click_element(element):
     driver = element.parent
     driver.execute_script("arguments[0].style.border='2px solid red'", element)
@@ -36,8 +44,12 @@ def main():
     url = "https://www.google.com/maps/place/Jake's+Dilemma/@40.7843363,-73.9778757,17z/data=!4m6!3m5!1s0x89c258860488a173:0xb585c75abc63fc77!8m2!3d40.7843586!4d-73.9777082!16s%2Fg%2F1tgdv16b?entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D"
     driver = get_driver(url)
 
-    button = get_menu_button(driver)
-    click_element(button)
+    menu_button = get_menu_button(driver)
+    menu_options = get_all_menu_options(driver)
+
+    print(menu_options)
+
+    click_element(menu_button)
 
     while True:
         time.sleep(10)
