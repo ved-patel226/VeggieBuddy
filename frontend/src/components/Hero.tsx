@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-xl font-semibold mb-2 text-zinc-700">
                   Search Restaurants
                 </h3>
                 <p className="text-gray-600">
@@ -147,7 +147,9 @@ const Hero: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Compare Options</h3>
+                <h3 className="text-xl font-semibold mb-2 text-zinc-700">
+                  Compare Options
+                </h3>
                 <p className="text-gray-600">
                   See detailed menus and find meals that match your dietary
                   restrictions.
@@ -171,7 +173,7 @@ const Hero: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-xl font-semibold mb-2 text-zinc-700">
                   Enjoy Confidently
                 </h3>
                 <p className="text-gray-600">
@@ -186,7 +188,7 @@ const Hero: React.FC = () => {
                 href="/restaurants"
                 className="inline-block px-8 py-3.5 bg-green-600 hover:bg-green-700 text-white !no-underline rounded-full font-medium shadow-lg transition-all hover:shadow-green-200 hover:shadow-xl hover:-translate-y-1"
               >
-                Find Restaurants Now
+                <span className="text-white"> Find Restaurants Now</span>
               </a>
             </div>
           </div>

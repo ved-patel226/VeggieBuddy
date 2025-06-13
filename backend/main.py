@@ -27,58 +27,18 @@ def get_restaurants():
     return jsonify(filtered)
 
 
-@app.route("/api/resturuants2")
-def get_restaurants2():
-    query = request.args.get("q", "").lower()
-    filtered = (
-        [r for r in restaurants if query in r["name"].lower()] if query else restaurants
+@app.route("/api/restaurant")
+def get_restaurant():
+    place_id = request.args.get("placeid", "").lower()
+
+    restaurant = next(
+        (r for r in restaurants if r.get("place_id", "").lower() == place_id), None
     )
-    filtered.sort(key=lambda x: x.get("rating", 0), reverse=True)
 
-    results = []
-
-    for relevent_resturuant in filtered:
-        print(relevent_resturuant["name"])
-
-        place_id = relevent_resturuant["place_id"]
-
-        try:
-            menu_items = VeggieBuddyScraper(place_id).scrape()
-        except Exception as e:
-            continue
-
-        veg_items = 0
-
-        for item in menu_items:
-            res = ask_llm(str(item))
-
-            # Remove anything in parentheses (and the parentheses) from res
-            res_clean = re.sub(r"\(.*?\)", "", res).strip()
-            if res_clean.lower() == "y":
-                veg_items += 1
-            elif res_clean.lower() == "n":
-                continue
-            else:
-                print(f"Unrecognized output, defaulting to 'n', {res_clean}")
-
-        results.append(
-            {
-                "restaurant_name": relevent_resturuant["name"],
-                "place_id": place_id,
-                "veg_items": veg_items,
-            }
-        )
-
-    # Write results to CSV
-    csv_file = "veg_items_results.csv"
-    with open(csv_file, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(
-            f, fieldnames=["restaurant_name", "place_id", "veg_items"]
-        )
-        writer.writeheader()
-        writer.writerows(results)
-
-    return jsonify(results)
+    if restaurant:
+        return jsonify(restaurant)
+    else:
+        return jsonify({"error": "Restaurant not found"}), 404
 
 
 if __name__ == "__main__":
