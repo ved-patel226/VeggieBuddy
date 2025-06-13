@@ -94,7 +94,7 @@ npm start
 
 ## 📚 API Documentation
 
-The VeggieBuddy API is available at `http://localhost:5000/api/v1`
+The VeggieBuddy API is available at `http://127.0.0.1:3000/`
 
 | Endpoint              | Method | Description                    |
 | --------------------- | ------ | ------------------------------ |
@@ -124,9 +124,3 @@ See the [contributing guide](CONTRIBUTING.md) for detailed instructions.
 
 Copyright © 2025 [Ved Patel & Vedant Daga](https://github.com/ved-patel226).<br />
 This project is [MIT](https://mit-license.org/) licensed.
-
----
-
-<div align="center">
-  <sub>Built with ❤️ by Ved & Vedant</sub>
-</div>
