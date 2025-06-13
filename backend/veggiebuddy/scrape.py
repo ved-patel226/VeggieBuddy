@@ -8,7 +8,6 @@ from selenium.common.exceptions import (
     StaleElementReferenceException,
     NoSuchElementException,
 )
-from bs4 import BeautifulSoup
 
 import time
 
