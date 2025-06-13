@@ -21,6 +21,7 @@ def get_restaurants(api_key, location, radius, type_, max_results=100):
         "location": location,
         "radius": radius,
         "type": type_,
+        "keyword": "-hotel",  # Exclude results with 'hotel' in the name
     }
     results = []
     while len(results) < max_results:
