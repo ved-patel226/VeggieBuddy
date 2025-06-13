@@ -15,17 +15,20 @@ const RestaurantPicker: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [preference, setPreference] = useState("vegetarian");
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  useEffect(() => {
+  const fetchRestaurants = () => {
     setLoading(true);
     setError(null);
 
     fetch(
-      `http://127.0.0.1:5000/api/restaurants?q=${encodeURIComponent(query)}`
+      `http://127.0.0.1:5000/api/restaurants?q=${encodeURIComponent(
+        query
+      )}&preference=${encodeURIComponent(preference)}`
     )
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
@@ -39,10 +42,20 @@ const RestaurantPicker: React.FC = () => {
         setError(err.message);
         setLoading(false);
       });
-  }, [query]);
+  };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
+  };
+
+  const handleSearch = () => {
+    fetchRestaurants();
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
   };
 
   return (
@@ -92,15 +105,74 @@ const RestaurantPicker: React.FC = () => {
             Restaurants
           </h1>
 
-          <div className="relative mb-12">
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 opacity-30 blur-md"></div>
-            <input
-              type="text"
-              placeholder="Search for vegetarian restaurants near you..."
-              value={query}
-              onChange={handleChange}
-              className="text-[#00a63e] relative w-full px-6 py-4 bg-white rounded-full text-lg shadow-lg border border-green-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
-            />
+          <div className="flex flex-col md:flex-row mb-12">
+            <div className="relative flex-1 md:mr-4 mb-4 md:mb-0">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 opacity-30 blur-md"></div>
+              <input
+                type="text"
+                placeholder="Search for vegetarian restaurants near you..."
+                value={query}
+                onChange={handleChange}
+                onKeyPress={handleKeyPress}
+                className="text-[#00a63e] relative w-full px-6 py-4 bg-white rounded-full text-lg shadow-lg border border-green-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+              />
+            </div>
+
+            <div className="relative w-full md:w-fit mb-4 md:mb-0 md:mr-4">
+              <select
+                value={preference}
+                onChange={(e) => setPreference(e.target.value)}
+                className="text-[#00a63e] relative w-full px-6 py-4 bg-white rounded-full text-lg shadow-md border border-green-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+              >
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="pescatarian">Pescatarian</option>
+                <option value="lacto-vegetarian">Lacto-Vegetarian</option>
+                <option value="ovo-vegetarian">Ovo-Vegetarian</option>
+                <option value="lacto-ovo-vegetarian">
+                  Lacto-Ovo Vegetarian
+                </option>
+                <option value="kosher">Kosher</option>
+                <option value="halal">Halal</option>
+                <option value="gluten-free">Gluten-Free</option>
+                <option value="dairy-free">Dairy-Free</option>
+                <option value="nut-free">Nut-Free</option>
+                <option value="no-red-meat">No Red Meat</option>
+                <option value="no-pork">No Pork</option>
+                <option value="low-carb">Low Carb</option>
+                <option value="low-sodium">Low Sodium</option>
+                <option value="organic">Organic</option>
+                <option value="raw-food">Raw Food</option>
+                <option value="paleo">Paleo</option>
+                <option value="keto">Keto</option>
+                <option value="diabetic-friendly">Diabetic Friendly</option>
+              </select>
+            </div>
+
+            <div className="relative w-full md:w-auto">
+              <button
+                onClick={handleSearch}
+                className="relative w-full md:w-auto px-6 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all"
+              >
+                <div className="flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                  Search
+                </div>
+              </button>
+            </div>
           </div>
 
           {loading && (
@@ -114,14 +186,12 @@ const RestaurantPicker: React.FC = () => {
               <p className="text-red-700">Error: {error}</p>
             </div>
           )}
-
           {!loading && !error && restaurants.length === 0 && (
             <div className="text-center text-gray-600 my-12">
               <p className="text-xl">No restaurants found.</p>
               <p className="mt-2">Try adjusting your search terms.</p>
             </div>
           )}
-
           <div
             className={`grid gap-6 md:grid-cols-2 lg:grid-cols-3 transition-all duration-1000 delay-300 transform ${
               isVisible
