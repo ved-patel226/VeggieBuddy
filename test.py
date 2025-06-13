@@ -147,15 +147,16 @@ data = [
 ]
 
 import json
+import pprint
 
 with open("restaurants.json", "r") as f:
     target_data = json.load(f)
 
-inject_data = json.load(data)[0]
-
-
 inject_place_ids = {item["place_id"]: item["veg_items"] for item in data}
 
-for res in target_data[0]:
+for res in target_data:
     place_id = res.get("place_id")
     res["veg_items"] = inject_place_ids.get(place_id, 0)
+
+with open("restaurants.json", "w") as f:
+    json.dump(target_data, f, indent=2)

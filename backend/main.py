@@ -20,7 +20,10 @@ def get_restaurants():
     filtered = (
         [r for r in restaurants if query in r["name"].lower()] if query else restaurants
     )
-    filtered.sort(key=lambda x: x.get("rating", 0), reverse=True)
+    # Exclude restaurants with veg_items == 0 if the key exists
+    filtered = [r for r in filtered if r.get("veg_items", 1) != 0]
+    filtered.sort(key=lambda x: x.get("veg_items", 0), reverse=True)
+
     return jsonify(filtered)
 
 
