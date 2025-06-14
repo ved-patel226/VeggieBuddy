@@ -82,7 +82,6 @@ class VeggieBuddyScraper:
                 if item_details:
                     items.append(item_details)
             except (StaleElementReferenceException, NoSuchElementException) as e:
-                # Skip this element if it's stale
                 print(f"Skipping stale element: {str(e)}")
                 continue
 
@@ -107,9 +106,7 @@ class VeggieBuddyScraper:
         try:
             element.click()
         except StaleElementReferenceException:
-            # Try to find the element again if it's stale
             print("Element became stale, retrying...")
-            # This is a simplified retry - might need more context-specific handling
 
     def scrape(self):
         try:

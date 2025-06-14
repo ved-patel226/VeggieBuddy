@@ -3,7 +3,7 @@ from veggiebuddy.llm import ask_llm
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import json 
+import json
 from tqdm import tqdm
 
 app = Flask(__name__)
@@ -17,15 +17,16 @@ def get_restaurants():
     query = request.args.get("q", "").lower()
     preference = request.args.get("preference", "vegetarian").lower()
     target_cusine = request.args.get("filter", "").lower()
-    
-    
+
     filtered = (
         [r for r in restaurants if query in r["name"].lower()] if query else restaurants
     )
 
     # Filter by cuisine if a target cuisine is specified
     if target_cusine:
-        filtered = [r for r in filtered if r.get("cuisine", "").lower() == target_cusine]
+        filtered = [
+            r for r in filtered if r.get("cuisine", "").lower() == target_cusine
+        ]
 
     preference_key = f"{preference}_items"
 
@@ -81,7 +82,9 @@ def get_restaurants():
             )
             # Apply cuisine filter during re-filtering
             if target_cusine:
-                filtered = [r for r in filtered if r.get("cuisine", "").lower() == target_cusine]
+                filtered = [
+                    r for r in filtered if r.get("cuisine", "").lower() == target_cusine
+                ]
             filtered = [
                 r
                 for r in filtered
@@ -108,16 +111,16 @@ def get_restaurant():
     else:
         return jsonify({"error": "Restaurant not found"}), 404
 
+
 @app.route("/api/available-cuisines")
 def get_available_cuisines():
     cuisines = set()
     for restaurant in restaurants:
-        if "cuisine" in restaurant:
-            if restaurant["cuisine"] != "":
-                cuisines.add(restaurant["cuisine"])
+        if "cuisine" in restaurant and restaurant["cuisine"] != "":
+            cuisines.add(restaurant["cuisine"])
 
-            
     return jsonify(list(cuisines))
+
 
 @app.route("/api/cuisine-to-restaurants")
 def get_cuisine_to_restaurants():
@@ -130,6 +133,7 @@ def get_cuisine_to_restaurants():
             cuisine_to_restaurants[cuisine].append(restaurant)
 
     return jsonify(cuisine_to_restaurants)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
