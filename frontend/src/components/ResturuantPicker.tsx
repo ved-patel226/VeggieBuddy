@@ -16,6 +16,7 @@ const RestaurantPicker: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [preference, setPreference] = useState("vegetarian");
+  const [submittedpreference, setSubmittedPreference] = useState("");
 
   useEffect(() => {
     setIsVisible(true);
@@ -37,6 +38,7 @@ const RestaurantPicker: React.FC = () => {
       .then((data: Restaurant[]) => {
         setRestaurants(data);
         setLoading(false);
+        setSubmittedPreference(preference);
       })
       .catch((err: Error) => {
         setError(err.message);
@@ -186,12 +188,26 @@ const RestaurantPicker: React.FC = () => {
               <p className="text-red-700">Error: {error}</p>
             </div>
           )}
-          {!loading && !error && restaurants.length === 0 && (
-            <div className="text-center text-gray-600 my-12">
-              <p className="text-xl">No restaurants found.</p>
-              <p className="mt-2">Try adjusting your search terms.</p>
+
+          {!loading &&
+            !error &&
+            restaurants.length === 0 &&
+            submittedpreference && (
+              <div className="text-center text-gray-600 my-12">
+                <p className="text-xl">No restaurants found.</p>
+                <p className="mt-2">Try adjusting your search terms.</p>
+              </div>
+            )}
+
+          {!loading && !error && submittedpreference == "" && (
+            <div className="text-center text-gray-600 my-8">
+              <p className="text-lg">
+                No preference submitted yet. Please select a preference and
+                search.
+              </p>
             </div>
           )}
+
           <div
             className={`grid gap-6 md:grid-cols-2 lg:grid-cols-3 transition-all duration-1000 delay-300 transform ${
               isVisible
@@ -243,13 +259,21 @@ const RestaurantPicker: React.FC = () => {
                         />
                       </svg>
                       <span className="text-gray-700 font-medium">
-                        {typeof restaurant.veg_items === "number"
-                          ? restaurant.veg_items
+                        {typeof (restaurant as Record<string, any>)[
+                          submittedpreference.toLowerCase() + "_items"
+                        ] === "number"
+                          ? (restaurant as Record<string, any>)[
+                              submittedpreference.toLowerCase() + "_items"
+                            ]
                           : "N/A"}
                       </span>
                     </div>
                     <a
-                      href={`/restaurant/${restaurant.place_id}`}
+                      href={`/restaurant/${
+                        restaurant.place_id
+                      }?preference=${encodeURIComponent(
+                        submittedpreference.toLowerCase() + "_items"
+                      )}`}
                       className="ml-auto inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-full text-sm font-medium transition-colors"
                     >
                       <span className="text-white">View Details</span>

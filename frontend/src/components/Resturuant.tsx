@@ -8,7 +8,6 @@ interface RestaurantData {
   rating: number;
   user_ratings_total: number;
   price_level: number;
-  veg_items: number;
   opening_hours: {
     open_now: boolean;
   };
@@ -17,6 +16,7 @@ interface RestaurantData {
     html_attributions: string[];
   }>;
 }
+import { useSearchParams } from "react-router-dom";
 
 const RestaurantView: React.FC = () => {
   const { placeid } = useParams<{ placeid: string }>();
@@ -24,6 +24,9 @@ const RestaurantView: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+
+  const [searchParams] = useSearchParams();
+  const preference = searchParams.get("preference");
 
   useEffect(() => {
     setIsVisible(true);
@@ -192,7 +195,13 @@ const RestaurantView: React.FC = () => {
                         />
                       </svg>
                       <span className="text-gray-800 font-medium">
-                        {restaurant.veg_items} vegetarian items
+                        {preference &&
+                        typeof (restaurant as Record<string, any>)[
+                          preference
+                        ] === "number"
+                          ? (restaurant as Record<string, any>)[preference]
+                          : "N/A"}{" "}
+                        vegetarian items
                       </span>
                     </div>
                   </div>
