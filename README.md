@@ -87,21 +87,20 @@ python ./backend/main.py
 
 ```sh
 cd frontend
-npm start
+npm run dev
 ```
 
-3. Navigate to `http://localhost:3000` in your browser
+3. Navigate to `http://localhost:5173/` in your browser
 
 ## 📚 API Documentation
 
-The VeggieBuddy API is available at `http://127.0.0.1:3000/`
+The VeggieBuddy API is available at `http://127.0.0.1:5000/api`
 
-| Endpoint              | Method | Description                    |
-| --------------------- | ------ | ------------------------------ |
-| `/restaurants`        | GET    | Get all restaurants            |
-| `/restaurants/:id`    | GET    | Get restaurant by ID           |
-| `/restaurants/search` | GET    | Search restaurants by criteria |
-| `/users/profile`      | GET    | Get current user profile       |
+| Endpoint               | Method | Description                             |
+| ---------------------- | ------ | --------------------------------------- |
+| `/restaurants`         | GET    | Get all restaurants                     |
+| `/restaurants?q=`      | GET    | Get restaurants with search parameter   |
+| `/restaurant?placeid=` | GET    | Get restauraunt information via placeid |
 
 ## 🤝 Contributing
 
