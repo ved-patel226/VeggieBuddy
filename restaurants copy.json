@@ -157,7 +157,8 @@
       "establishment"
     ],
     "user_ratings_total": 1009,
-    "vicinity": "Inside Radio Hotel, 2420 Amsterdam Ave, New York"
+    "vicinity": "Inside Radio Hotel, 2420 Amsterdam Ave, New York",
+    "vegetarian_items": 4
   },
   {
     "business_status": "OPERATIONAL",
@@ -210,7 +211,9 @@
       "establishment"
     ],
     "user_ratings_total": 2394,
-    "vicinity": "2885 Broadway, New York"
+    "vicinity": "2885 Broadway, New York",
+    "vegetarian_items": 16,
+    "kosher_items": 1
   },
   {
     "business_status": "OPERATIONAL",
@@ -263,7 +266,8 @@
       "establishment"
     ],
     "user_ratings_total": 309,
-    "vicinity": "155 E 84th St, New York"
+    "vicinity": "155 E 84th St, New York",
+    "vegetarian_items": 20
   },
   {
     "business_status": "OPERATIONAL",
@@ -316,7 +320,9 @@
       "establishment"
     ],
     "user_ratings_total": 702,
-    "vicinity": "2020 Broadway, New York"
+    "vicinity": "2020 Broadway, New York",
+    "vegetarian_items": 38,
+    "kosher_items": 5
   },
   {
     "business_status": "OPERATIONAL",
@@ -370,7 +376,9 @@
       "establishment"
     ],
     "user_ratings_total": 1214,
-    "vicinity": "1678 3rd Ave, New York"
+    "vicinity": "1678 3rd Ave, New York",
+    "vegetarian_items": 31,
+    "kosher_items": 5
   },
   {
     "business_status": "OPERATIONAL",
@@ -423,7 +431,8 @@
       "establishment"
     ],
     "user_ratings_total": 2935,
-    "vicinity": "2651 Broadway, New York"
+    "vicinity": "2651 Broadway, New York",
+    "vegetarian_items": 23
   },
   {
     "business_status": "OPERATIONAL",
@@ -583,7 +592,9 @@
       "establishment"
     ],
     "user_ratings_total": 8364,
-    "vicinity": "328 Malcolm X Blvd, New York"
+    "vicinity": "328 Malcolm X Blvd, New York",
+    "vegetarian_items": 8,
+    "kosher_items": 1
   },
   {
     "business_status": "OPERATIONAL",
@@ -637,7 +648,8 @@
       "establishment"
     ],
     "user_ratings_total": 1713,
-    "vicinity": "1460 2nd Ave, New York"
+    "vicinity": "1460 2nd Ave, New York",
+    "vegetarian_items": 13
   },
   {
     "business_status": "OPERATIONAL",
@@ -1020,7 +1032,8 @@
       "establishment"
     ],
     "user_ratings_total": 475,
-    "vicinity": "949 Columbus Ave, New York"
+    "vicinity": "949 Columbus Ave, New York",
+    "vegetarian_items": 12
   },
   {
     "business_status": "OPERATIONAL",
@@ -1130,7 +1143,9 @@
       "establishment"
     ],
     "user_ratings_total": 348,
-    "vicinity": "210 W 94th St, New York"
+    "vicinity": "210 W 94th St, New York",
+    "vegetarian_items": 16,
+    "kosher_items": 1
   },
   {
     "business_status": "OPERATIONAL",
@@ -1183,7 +1198,9 @@
       "establishment"
     ],
     "user_ratings_total": 1300,
-    "vicinity": "511 W 125th St, New York"
+    "vicinity": "511 W 125th St, New York",
+    "vegetarian_items": 13,
+    "kosher_items": 3
   },
   {
     "business_status": "OPERATIONAL",
@@ -1236,7 +1253,8 @@
       "establishment"
     ],
     "user_ratings_total": 310,
-    "vicinity": "1246 Madison Ave, New York"
+    "vicinity": "1246 Madison Ave, New York",
+    "vegetarian_items": 12
   },
   {
     "business_status": "OPERATIONAL",
@@ -1289,7 +1307,9 @@
       "establishment"
     ],
     "user_ratings_total": 4079,
-    "vicinity": "200 Park Ave, Fort Lee"
+    "vicinity": "200 Park Ave, Fort Lee",
+    "vegetarian_items": 1,
+    "kosher_items": 1
   },
   {
     "business_status": "OPERATIONAL",
@@ -1450,7 +1470,8 @@
       "establishment"
     ],
     "user_ratings_total": 613,
-    "vicinity": "768 Amsterdam Ave, New York"
+    "vicinity": "768 Amsterdam Ave, New York",
+    "vegetarian_items": 2
   },
   {
     "business_status": "OPERATIONAL",
@@ -1559,7 +1580,8 @@
       "establishment"
     ],
     "user_ratings_total": 4519,
-    "vicinity": "1439 2nd Ave, New York"
+    "vicinity": "1439 2nd Ave, New York",
+    "vegetarian_items": 20
   },
   {
     "business_status": "OPERATIONAL",
@@ -1612,7 +1634,8 @@
       "establishment"
     ],
     "user_ratings_total": 607,
-    "vicinity": "1244 Lexington Ave, New York"
+    "vicinity": "1244 Lexington Ave, New York",
+    "kosher_items": 2
   },
   {
     "business_status": "OPERATIONAL",
@@ -1666,7 +1689,8 @@
       "establishment"
     ],
     "user_ratings_total": 2022,
-    "vicinity": "1648 2nd Ave, New York"
+    "vicinity": "1648 2nd Ave, New York",
+    "vegetarian_items": 8
   },
   {
     "business_status": "OPERATIONAL",
@@ -1776,7 +1800,8 @@
       "establishment"
     ],
     "user_ratings_total": 1523,
-    "vicinity": "3533 Broadway, New York"
+    "vicinity": "3533 Broadway, New York",
+    "vegetarian_items": 8
   },
   {
     "business_status": "OPERATIONAL",
@@ -1941,7 +1966,9 @@
       "establishment"
     ],
     "user_ratings_total": 98,
-    "vicinity": "48 E 183rd St, Bronx"
+    "vicinity": "48 E 183rd St, Bronx",
+    "vegetarian_items": 16,
+    "kosher_items": 1
   },
   {
     "business_status": "OPERATIONAL",
@@ -2154,7 +2181,8 @@
       "establishment"
     ],
     "user_ratings_total": 394,
-    "vicinity": "201 W 103rd St, New York"
+    "vicinity": "201 W 103rd St, New York",
+    "vegetarian_items": 6
   },
   {
     "business_status": "OPERATIONAL",
@@ -2208,7 +2236,8 @@
       "establishment"
     ],
     "user_ratings_total": 312,
-    "vicinity": "520 Columbus Ave, New York"
+    "vicinity": "520 Columbus Ave, New York",
+    "kosher_items": 2
   },
   {
     "business_status": "OPERATIONAL",
@@ -2316,7 +2345,9 @@
       "establishment"
     ],
     "user_ratings_total": 444,
-    "vicinity": "7312 Broadway, North Bergen"
+    "vicinity": "7312 Broadway, North Bergen",
+    "vegetarian_items": 16,
+    "kosher_items": 1
   },
   {
     "business_status": "OPERATIONAL",
@@ -2422,7 +2453,9 @@
       "establishment"
     ],
     "user_ratings_total": 343,
-    "vicinity": "783 Palisade Ave, Cliffside Park"
+    "vicinity": "783 Palisade Ave, Cliffside Park",
+    "vegetarian_items": 21,
+    "kosher_items": 2
   },
   {
     "business_status": "OPERATIONAL",
@@ -2477,7 +2510,8 @@
       "establishment"
     ],
     "user_ratings_total": 952,
-    "vicinity": "565 Gorge Rd, Cliffside Park"
+    "vicinity": "565 Gorge Rd, Cliffside Park",
+    "kosher_items": 1
   },
   {
     "business_status": "OPERATIONAL",
@@ -2530,7 +2564,8 @@
       "establishment"
     ],
     "user_ratings_total": 108,
-    "vicinity": "218 Anderson Ave, Fairview"
+    "vicinity": "218 Anderson Ave, Fairview",
+    "kosher_items": 1
   },
   {
     "business_status": "OPERATIONAL",
@@ -2583,7 +2618,8 @@
       "establishment"
     ],
     "user_ratings_total": 1224,
-    "vicinity": "1271 3rd Ave, New York"
+    "vicinity": "1271 3rd Ave, New York",
+    "kosher_items": 14
   },
   {
     "business_status": "OPERATIONAL",
@@ -2688,7 +2724,8 @@
       "establishment"
     ],
     "user_ratings_total": 556,
-    "vicinity": "227 E 116th St, New York"
+    "vicinity": "227 E 116th St, New York",
+    "kosher_items": 2
   },
   {
     "business_status": "OPERATIONAL",
@@ -2796,7 +2833,8 @@
       "establishment"
     ],
     "user_ratings_total": 341,
-    "vicinity": "24 69th St, Guttenberg"
+    "vicinity": "24 69th St, Guttenberg",
+    "vegetarian_items": 7
   },
   {
     "business_status": "OPERATIONAL",
@@ -2849,7 +2887,8 @@
       "establishment"
     ],
     "user_ratings_total": 493,
-    "vicinity": "264 Old River Rd, Edgewater"
+    "vicinity": "264 Old River Rd, Edgewater",
+    "vegetarian_items": 28
   },
   {
     "business_status": "OPERATIONAL",
@@ -3010,7 +3049,8 @@
       "establishment"
     ],
     "user_ratings_total": 455,
-    "vicinity": "6300 Hudson Ave, West New York"
+    "vicinity": "6300 Hudson Ave, West New York",
+    "vegetarian_items": 15
   },
   {
     "business_status": "OPERATIONAL",
@@ -3064,7 +3104,8 @@
       "establishment"
     ],
     "user_ratings_total": 762,
-    "vicinity": "1475 Bergen Blvd, Fort Lee"
+    "vicinity": "1475 Bergen Blvd, Fort Lee",
+    "vegetarian_items": 41
   },
   {
     "business_status": "OPERATIONAL",
@@ -3170,7 +3211,9 @@
       "establishment"
     ],
     "user_ratings_total": 562,
-    "vicinity": "36-20 Ditmars Blvd, Astoria"
+    "vicinity": "36-20 Ditmars Blvd, Astoria",
+    "vegetarian_items": 16,
+    "kosher_items": 1
   },
   {
     "business_status": "OPERATIONAL",
