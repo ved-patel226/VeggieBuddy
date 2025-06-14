@@ -333,7 +333,8 @@
         "vicinity": "2020 Broadway, New York",
         "vegetarian_items": 38,
         "kosher_items": 5,
-        "cuisine": ""
+        "cuisine": "",
+        "img": "https://lh3.googleusercontent.com/p/AF1QipPtLk8tg0T3UXgIUhcUbQvUhWFBVC2GtAxEjSKR=w408-h295-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -556,7 +557,8 @@
         ],
         "user_ratings_total": 1094,
         "vicinity": "2695 Frederick Douglass Blvd, New York",
-        "cuisine": "Soul food"
+        "cuisine": "Soul food",
+        "img": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhE-lT7G3Kw4G7WUcX7APPdN6HwwW3uTbkkZNW-xFbtgUeiIkB_BsO5NoXYqzhEpPaQcuGh1e9V2SD14TjlYEmFzAsXI36IWC0Xu7rzpuaIxonvskVi7EZVivk6FO0ypRLnXtI9nUx6SRHJ2RFKp1F21tsRqPpddCS4ztV2XOIPi_bMCk5to0ha-AJkIl5C3g-yhzQ=w408-h272-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -613,7 +615,8 @@
         "vicinity": "328 Malcolm X Blvd, New York",
         "vegetarian_items": 8,
         "kosher_items": 1,
-        "cuisine": "Soul food"
+        "cuisine": "Soul food",
+        "img": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqY9yj93VtKlL-aRIjg23_AIBcHyFCSZhY3efBbJXmwO8KSzqyhxgIF9ELUYWc1veoSn57AnByiiWKDY4E5JsuIrn1896FbHQq5ZP4shN_FEmY8cSUxI3j_wKNpxF-p8BmH0bSH=w408-h408-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -669,7 +672,8 @@
         "user_ratings_total": 1713,
         "vicinity": "1460 2nd Ave, New York",
         "vegetarian_items": 13,
-        "cuisine": "Spanish"
+        "cuisine": "Spanish",
+        "img": "https://lh3.googleusercontent.com/p/AF1QipNNcFiP-MkAH4kvitfbjg46FFOgJiQygKTuTFBx=w408-h611-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -782,7 +786,8 @@
         ],
         "user_ratings_total": 1125,
         "vicinity": "1575 Lexington Ave, New York",
-        "cuisine": "Thai"
+        "cuisine": "Thai",
+        "img": "https://lh3.googleusercontent.com/p/AF1QipPB2eEcirnC83wzcRuGiWoLTNRqINH6vlSMBPYX=w408-h544-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -836,7 +841,8 @@
         ],
         "user_ratings_total": 782,
         "vicinity": "574 Columbus Ave, New York",
-        "cuisine": "Italian"
+        "cuisine": "Italian",
+        "img": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noJ1RHnjPKzu3V34PbZYwazGz1vtLF-wVyipIPqTuaGdvr2I3jMxVqjQErYVP9I8kmtbBc5keL3BFdYSbw7Pi9yeqL8azbD577I82NWhw_MlNcssNxQip9HeTfEEbKT_2-EMuiRCg=w408-h544-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -890,7 +896,8 @@
         ],
         "user_ratings_total": 167,
         "vicinity": "27-35 21st St, Astoria",
-        "cuisine": "Asian fusion"
+        "cuisine": "Asian fusion",
+        "img": "https://lh3.googleusercontent.com/p/AF1QipNWGJBJxufDPbr7jE-Of9qGbh-84FUx8JoBjlae=w408-h539-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -1063,7 +1070,8 @@
         "user_ratings_total": 475,
         "vicinity": "949 Columbus Ave, New York",
         "vegetarian_items": 12,
-        "cuisine": "Mexican"
+        "cuisine": "Mexican",
+        "img": "https://lh3.googleusercontent.com/p/AF1QipMTkEp8p8guOouaAUXQEiuEJtahJ8Ggh3m5ANDz=w408-h725-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -1117,7 +1125,8 @@
         ],
         "user_ratings_total": 384,
         "vicinity": "53 W 106th St, New York",
-        "cuisine": "Italian"
+        "cuisine": "Italian",
+        "img": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrBl4IVeJjJBQ7UFUz1uw86kPZKW1T5ANdxZB0exHM00QS-wMnXOyP8M5PchF_pIgPRnLdZrzSw68uYvKpDJp6z3YadwyO5RqzRB4a6yE5MfEJW48h5_yt1xS0WTIM9Fuhgrr8=w408-h544-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -1347,7 +1356,8 @@
         "vicinity": "200 Park Ave, Fort Lee",
         "vegetarian_items": 1,
         "kosher_items": 1,
-        "cuisine": "American"
+        "cuisine": "American",
+        "img": "https://lh3.googleusercontent.com/p/AF1QipNQmErdS6ipZlTM6H1wD6XU_WEoE4umXCMLGm2t=w408-h306-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -1628,7 +1638,8 @@
         "user_ratings_total": 4519,
         "vicinity": "1439 2nd Ave, New York",
         "vegetarian_items": 20,
-        "cuisine": "Thai"
+        "cuisine": "Thai",
+        "img": "https://lh3.googleusercontent.com/p/AF1QipMZWrk1wL60jIgkWf_FXqQS1KnQx8vomLOmh9oi=w426-h240-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -2141,7 +2152,7 @@
         "user_ratings_total": 321,
         "vicinity": "94 Anderson Ave, Fairview",
         "cuisine": "Guatemalan",
-        "img": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhEscVvZJUSJWZRz5gM7z-zs4fX_pmadYmCIB4jGvagY3GGMwt-O4zjdFjse9GbJVKnwEi-sDO6YWwbUaH18FUkZWb8N8TB04UhAUAWmOWmccpTUqgjUu61P0y5aB-piOhh78LZ8EcLYpBDow3iMxv2vMFQ_P23n0l7JQ5wcLTl1U_YPF8M_xor3BMegyos07fBeAw=w426-h240-k-no"
+        "img": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhFfdAc_YiI-tpU9Yw0wjsl69Hcv3VMvwRU0TiT77hZ2Vx3exmFbnMh_6bNeSPGuJ8E4507OHJh5b46jeescePlGNtmCjc8UhNjGJCm5Ca0EnLUUMvm_P8udz3P7eQmifxykyO8t4KJ3maN1J_KLJaSpGdK2wE1LAfYM-zZ706CW1191K44c3HuTHoX4eol1vC9yPg=w426-h240-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -2307,7 +2318,8 @@
         "user_ratings_total": 312,
         "vicinity": "520 Columbus Ave, New York",
         "kosher_items": 2,
-        "cuisine": "Greek"
+        "cuisine": "Greek",
+        "img": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrwFpXFij2v-BJqv_wXckL744x-1TTV_mRYhzARjx_vjIWwiBfHO4_6S0_fA_O46zUeNiR4F4D3Q1kC3UvgNUVH_9CLoYDJx77kHax2gJf_-ojDbPQ-jIGpFYp1LABog3Dttfa8SA=w408-h544-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -2868,7 +2880,8 @@
         ],
         "user_ratings_total": 250,
         "vicinity": "6024 Hudson Ave, West New York",
-        "cuisine": "Salvadoran"
+        "cuisine": "Salvadoran",
+        "img": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqV1aUGsjWWDdJX9acHCe6uRGUA2d9I39qNnWhDpXWXP-D3G2kbCeKUA1qkT_u5kmCbBJspdxoFV4ITtLPk8swmt4lxS8zj3M94NZrdXNaJR1aFtOZmxhoyh-0lkQzsH7fnRA1Y=w408-h510-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -3036,7 +3049,8 @@
         ],
         "user_ratings_total": 225,
         "vicinity": "5525 Palisade Ave, West New York",
-        "cuisine": "Cuban"
+        "cuisine": "Cuban",
+        "img": "https://lh3.googleusercontent.com/p/AF1QipP3aUyEXfBP-yUbq4XJ_MRJZBQZUtiFMTakEVQ_=w408-h306-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -3091,7 +3105,7 @@
         "user_ratings_total": 554,
         "vicinity": "3151 Broadway, New York",
         "cuisine": "Mexican",
-        "img": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhH0LJ3oGHETeLQWWSG-GbH2GRIOshgXKmGb9kYvdZq6WEEVbL85nHVzO59GAB8l7WOyju9rGNvK68OPaoMJcQwW_QXvdU8vERHPvQR4GAlyMNhRjBl5kgY6eD7rigUqSzvpcJ_OoYgr3fXJhURsenNlUOnAq8i0RTQZE72p-VG9xX16W93xbV73H3XN5Qsh9yzEtA=w426-h240-k-no"
+        "img": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGoLLPV5WdE_aro0PkuHEayA9RzoiofZaWbtU5wissXsPRZ9AohKrQlKMavh9WxPMUodPoOfFgbT7-RATmo-xLApzTGpzM_JDez3ImJi22enHiOpqXiEPaLY9jyhWRQXTQZo7oriSxk64OiHc2euKuiZ3vxZ44BrqkufQUU9HUO9tqTg-8S_7I5ojHWlj5nXziCnQ=w426-h240-k-no"
     },
     {
         "business_status": "OPERATIONAL",
@@ -3147,7 +3161,8 @@
         "user_ratings_total": 455,
         "vicinity": "6300 Hudson Ave, West New York",
         "vegetarian_items": 15,
-        "cuisine": "Cuban"
+        "cuisine": "Cuban",
+        "img": "https://lh3.googleusercontent.com/p/AF1QipNOITeemsWC6A5QdpHUhIjhIRv88DNs-9TrrZCs=w427-h240-k-no"
     },
     {
         "business_status": "OPERATIONAL",

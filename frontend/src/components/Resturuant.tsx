@@ -211,9 +211,10 @@ const RestaurantView: React.FC = () => {
                         typeof (restaurant as Record<string, any>)[
                           preference
                         ] === "number"
-                          ? (restaurant as Record<string, any>)[preference]
-                          : "N/A"}{" "}
-                        vegetarian items
+                          ? `${
+                              (restaurant as Record<string, any>)[preference]
+                            } ${preference.split("_")[0]} items`
+                          : "N/A"}
                       </span>
                     </div>
                   </div>

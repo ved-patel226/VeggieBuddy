@@ -5,6 +5,8 @@ from selenium.webdriver.chrome.options import Options
 
 import json
 from tqdm import tqdm
+import time
+
 
 with open("restaurants.json", "r") as file:
     restauraunts = json.load(file)
@@ -19,6 +21,8 @@ driver = webdriver.Chrome(
 
 for res in tqdm(restauraunts, desc="Processing restaurants"):
     driver.get("https://www.google.com/maps/place/?q=place_id:" + res["place_id"])
+    time.sleep(1)
+    
     try:
         # Assuming there's a specific element to wait for, e.g., the restaurant's name
         element = driver.find_element(
