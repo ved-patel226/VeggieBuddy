@@ -15,18 +15,12 @@
 
 ## 📋 Overview
 
-VeggieBuddy is a web application that helps you discover the best vegetarian-friendly restaurants near you. With smart, personalized recommendations based on your location and preferences, it makes finding meat-free meals easy and stress-free. Whether you're a lifelong vegetarian or just exploring plant-based options, VeggieBuddy connects you to spots you'll love.
-
-## ✨ Features
-
-- **Location-based search**: Find vegetarian restaurants in your area
-- **Personalized recommendations**: Get suggestions based on your preferences
-- **Detailed restaurant information**: View menus, ratings, reviews, and more
+VeggieBuddy is a web application that helps you discover the best food-friendly restaurants near you. With smart recommendations based on your preferences, it makes finding meals meals based on your preference easy and stress-free. VeggieBuddy connects you to spots you'll love.
 
 ## 🖼️ Screenshots
 
 <div align="center">
-  <img src="docs/assets/screenshot-home.png" alt="Home Page" width="45%" />
+  <img src="assets/landingpage.png" alt="Home Page" width="45%" />
   <img src="docs/assets/screenshot-results.png" alt="Search Results" width="45%" />
 </div>
 

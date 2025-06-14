@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, use } from "react";
 import type { ChangeEvent } from "react";
 
 interface Restaurant {
+  cuisine: any;
   veg_items: any;
   place_id: string;
   name: string;
@@ -17,6 +18,24 @@ const RestaurantPicker: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [preference, setPreference] = useState("vegetarian");
   const [submittedpreference, setSubmittedPreference] = useState("");
+  const [restaurauntToCuisineMap, setRestaurantToCuisineMap] = useState<
+    Record<string, string[]>
+  >({});
+  const [filter, setFilter] = useState<string>("");
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/api/cuisine-to-restaurants")
+      .then((res) => {
+        if (!res.ok) throw new Error("Network response was not ok");
+        return res.json();
+      })
+      .then((data: Record<string, string[]>) => {
+        setRestaurantToCuisineMap(data);
+      })
+      .catch((err: Error) => {
+        console.error("Error fetching restaurant to cuisine map:", err);
+      });
+  }, []);
 
   useEffect(() => {
     setIsVisible(true);
@@ -29,7 +48,9 @@ const RestaurantPicker: React.FC = () => {
     fetch(
       `http://127.0.0.1:5000/api/restaurants?q=${encodeURIComponent(
         query
-      )}&preference=${encodeURIComponent(preference)}`
+      )}&preference=${encodeURIComponent(
+        preference
+      )}&filter=${encodeURIComponent(filter)}`
     )
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
@@ -152,6 +173,23 @@ const RestaurantPicker: React.FC = () => {
                 <option value="paleo">Paleo</option>
                 <option value="keto">Keto</option>
                 <option value="diabetic-friendly">Diabetic Friendly</option>
+              </select>
+            </div>
+
+            <div className="relative w-full md:w-fit mb-4 md:mb-0 md:mr-4">
+              <select
+                value={filter} // Changed from preference to filter
+                onChange={(e) => {
+                  setFilter(e.target.value);
+                }}
+                className="text-[#00a63e] relative w-full px-6 py-4 bg-white rounded-full text-lg shadow-md border border-green-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+              >
+                <option value="">All Cuisines</option>
+                {Object.keys(restaurauntToCuisineMap).map((cuisine) => (
+                  <option key={cuisine} value={cuisine}>
+                    {cuisine.charAt(0).toUpperCase() + cuisine.slice(1)}
+                  </option>
+                ))}
               </select>
             </div>
 
