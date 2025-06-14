@@ -123,7 +123,11 @@ const RestaurantPicker: React.FC = () => {
             <div className="relative w-full md:w-fit mb-4 md:mb-0 md:mr-4">
               <select
                 value={preference}
-                onChange={(e) => setPreference(e.target.value)}
+                onChange={(e) => {
+                  setPreference(e.target.value);
+                  setRestaurants([]); // Clear restaurants when preference changes
+                  setSubmittedPreference(""); // Reset submitted preference
+                }}
                 className="text-[#00a63e] relative w-full px-6 py-4 bg-white rounded-full text-lg shadow-md border border-green-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
               >
                 <option value="vegetarian">Vegetarian</option>

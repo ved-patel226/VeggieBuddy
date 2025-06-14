@@ -6,6 +6,7 @@ interface RestaurantData {
   name: string;
   vicinity: string;
   rating: number;
+  img: string;
   user_ratings_total: number;
   price_level: number;
   opening_hours: {
@@ -64,38 +65,49 @@ const RestaurantView: React.FC = () => {
     ? Array(restaurant.price_level).fill("$").join("")
     : "N/A";
 
+  console.log(restaurant?.img);
+
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-br from-green-50 to-white overflow-hidden py-16">
+      <div
+        className="absolute inset-0 bg-cover bg-center filter blur-sm opacity-30"
+        style={{
+          backgroundImage: restaurant?.img ? `url(${restaurant.img})` : "none",
+        }}
+      ></div>
       {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-0 w-full opacity-80">
-          <svg
-            viewBox="0 0 1440 320"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="#4ade80"
-              fillOpacity="0.2"
-              d="M0,224L60,213.3C120,203,240,181,360,181.3C480,181,600,203,720,208C840,213,960,203,1080,181.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-            />
-          </svg>
-        </div>
-        <div className="absolute bottom-0 left-0 w-full opacity-30">
-          <svg
-            viewBox="0 0 1440 320"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="#86efac"
-              fillOpacity="0.3"
-              d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-            />
-          </svg>
-        </div>
+        {!restaurant?.img && (
+          <>
+            <div className="absolute bottom-0 left-0 w-full opacity-80">
+              <svg
+                viewBox="0 0 1440 320"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#4ade80"
+                  fillOpacity="0.2"
+                  d="M0,224L60,213.3C120,203,240,181,360,181.3C480,181,600,203,720,208C840,213,960,203,1080,181.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+                />
+              </svg>
+            </div>
+            <div className="absolute bottom-0 left-0 w-full opacity-30">
+              <svg
+                viewBox="0 0 1440 320"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#86efac"
+                  fillOpacity="0.3"
+                  d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+                />
+              </svg>
+            </div>
+          </>
+        )}
       </div>
-
       {/* Content */}
       <div className="container mx-auto px-4 md:px-8 z-10 relative">
         <div
