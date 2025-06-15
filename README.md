@@ -1,8 +1,7 @@
 <div align="center">
-  <img src="docs/assets/veggiebuddy-logo.png" alt="VeggieBuddy Logo" width="200" height="200" />
   <h1>VeggieBuddy 🥗</h1>
   
-  <p>Discover vegetarian-friendly restaurants with ease</p>
+  <p>Discover diet-friendly restaurants with ease</p>
 
   <p>
     <a href="https://mit-license.org/" target="_blank">
@@ -20,15 +19,15 @@ VeggieBuddy is a web application that helps you discover the best food-friendly 
 ## 🖼️ Screenshots
 
 <div align="center">
-  <img src="assets/landingpage.png" alt="Home Page" width="45%" />
-  <img src="docs/assets/screenshot-results.png" alt="Search Results" width="45%" />
+  <img src="assets/landingpage.png" alt="Home Page" width="32%" />
+  <img src="assets/searchpage.png" alt="Search Results" width="32%" />
+  <img src="assets/viewpage.png" alt="View Page" width="32%" />
 </div>
 
 ## 🔧 Technologies
 
 - **Frontend**: HTML, CSS, TypeScript, React
 - **Backend**: Python, Flask
-- **Database**: MongoDB
 - **APIs**: Google Maps Places API
 
 ## 🚀 Getting Started
@@ -38,7 +37,6 @@ VeggieBuddy is a web application that helps you discover the best food-friendly 
 - Python 3.8+
 - pip
 - Node.js and npm (for frontend)
-- MongoDB (local or Atlas)
 
 ### Installation
 
@@ -52,19 +50,21 @@ cd veggiebuddy
 2. Install backend dependencies:
 
 ```sh
-pip install -r requirements.txt
+
+pip install -r backend/requirements.txt
 ```
 
 3. Install frontend dependencies:
 
 ```sh
 cd frontend
-npm install
+npm i
 ```
 
 4. Set up environment variables:
 
 ```sh
+cd ../
 cp .env.example .env
 # Edit .env with your API keys and database credentials
 ```
@@ -74,7 +74,7 @@ cp .env.example .env
 1. Start the backend server:
 
 ```sh
-python ./backend/main.py
+python backend/main.py
 ```
 
 2. In a separate terminal, start the frontend:
@@ -90,11 +90,12 @@ npm run dev
 
 The VeggieBuddy API is available at `http://127.0.0.1:5000/api`
 
-| Endpoint               | Method | Description                             |
-| ---------------------- | ------ | --------------------------------------- |
-| `/restaurants`         | GET    | Get all restaurants                     |
-| `/restaurants?q=`      | GET    | Get restaurants with search parameter   |
-| `/restaurant?placeid=` | GET    | Get restauraunt information via placeid |
+| Endpoint                      | Method | Description                                       |
+| ----------------------------- | ------ | ------------------------------------------------- |
+| `/restaurants?q=&preference=` | GET    | Get restaurants with search and preference filter |
+| `/restaurant?placeid=`        | GET    | Get restauraunt information via placeid           |
+| `/available-cuisines`         | GET    | Get a list of all available cuisines              |
+| `/cuisine-to-restaurants`     | GET    | Map each cuisine to its corresponding restaurants |
 
 ## 🤝 Contributing
 
