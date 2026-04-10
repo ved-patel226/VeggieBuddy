@@ -112,7 +112,7 @@ See the [contributing guide](CONTRIBUTING.md) for detailed instructions.
 ## 👨‍💻 Authors
 
 - [@ved-patel226](https://github.com/ved-patel226)
-- [@DagaVedant(https://github.com/DagaVedant)
+- [@DagaVedant](https://github.com/DagaVedant)
 
 ## 📝 License
 
